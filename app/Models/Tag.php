@@ -12,6 +12,6 @@ class Tag extends Model
     protected $fillable = ['name'];
 
     public function lessons(){
-        return $this->belongsToMany(Lesson::class);
+        return $this->belongsToMany(Lesson::class , 'lesson_tags');
     }
 }
